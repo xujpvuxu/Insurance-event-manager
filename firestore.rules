@@ -23,5 +23,11 @@ service cloud.firestore {
       allow update: if ownsExistingDocument()
         && request.resource.data.ownerId == request.auth.uid;
     }
+    match /eventGroups/{groupId} {
+      allow create: if ownsNewDocument();
+      allow read, delete: if ownsExistingDocument();
+      allow update: if ownsExistingDocument()
+        && request.resource.data.ownerId == request.auth.uid;
+    }
   }
 }
