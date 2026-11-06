@@ -6,4 +6,5 @@
 @media(max-width:760px){.event-actions{display:none!important}.event-card.actions-revealed .event-actions{display:grid!important}}.toast-undo{margin-left:12px;border:1px solid #ffffff66;border-radius:7px;background:#ffffff1a;color:white;padding:4px 9px;font-size:11px}
 .event-actions{align-items:center;gap:6px}.action-text{font-size:11px;padding:7px 9px;white-space:nowrap}.event-card{touch-action:pan-y}.event-list .event-card{transition:transform .2s ease}.event-card.actions-revealed{transform:translateX(-8px)}
 @media(max-width:760px){.event-card.actions-revealed{flex-wrap:wrap}.event-card.actions-revealed .event-actions{flex:1 0 100%;display:flex!important;justify-content:flex-end;flex-wrap:wrap;gap:6px}.event-card.actions-revealed .action-text{font-size:10px;padding:6px 8px}}
+.event-card .event-actions.always-visible{display:flex!important;flex:0 0 auto;align-items:center}
 .group-quick-picks{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:-5px 0 12px}.groups-panel{margin-top:22px}.group-list{margin-top:20px}
