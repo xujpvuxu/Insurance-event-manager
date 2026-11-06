@@ -42,3 +42,13 @@ Pull Request 應說明變更目的、影響範圍、對應任務或議題及驗�
 ## 資料與設定安全
 
 範例及測試使用虛構資料，勿提交真實保單、身分證號或理賠文件。若新增外部服務，將憑證放在環境變數，提供不含機密的設定範例，並在 `.gitignore` 排除本機機密設定。
+
+## Firebase 規則部署
+
+Firestore 規則維護於根目錄 `firestore.rules`，`firebase.json` 將此檔案指定為部署來源，`.firebaserc` 預設專案為 `insurance-event-manager`。修改規則並完成檢查後，使用下列命令直接部署：
+
+```powershell
+npx --yes firebase-tools deploy --only firestore:rules --project insurance-event-manager
+```
+
+需先確認 Firebase CLI 已登入正確帳號（`npx --yes firebase-tools login:list`）。部署後確認 CLI 顯示規則編譯成功與 `Deploy complete`。本專案已授權以此流程直接發布 Firestore 規則。
